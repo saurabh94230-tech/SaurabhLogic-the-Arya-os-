@@ -750,4 +750,161 @@ Features described in the roadmap are intended capabilities and should not be in
 HoloGesture aims to explore a more natural interaction layer for ARYA OS—one in which hand movement can become a controlled input method for desktop applications and, eventually, compatible spatial environments.
 The long-term objective is to combine natural interaction with reliability, user control, and secure execution.
 Part of the ARYA OS project.
-Made by Saurabh Tiwari 
+Execution Verification
+Read back device state · report success or failure · audit log
+2. Module structure
+Yeh suggested structure hai; ise tumhare actual repository ke hisaab se adjust karna hoga.
+ARYA-OS/
+├── core/
+│   └── arya_brain.py
+├── smart_devices/
+│   ├── device_manager.py
+│   ├── device_registry.py
+│   ├── device_discovery.py
+│   ├── command_router.py
+│   ├── state_monitor.py
+│   ├── protocol_adapters/
+│   │   ├── wifi_adapter.py
+│   │   ├── bluetooth_adapter.py
+│   │   ├── matter_adapter.py
+│   │   └── home_assistant_adapter.py
+│   ├── security/
+│   │   ├── device_policy.py
+│   │   ├── authorization.py
+│   │   └── audit_logger.py
+│   └── tests/
+│       ├── test_permissions.py
+│       ├── test_commands.py
+│       └── test_state_verification.py
+└── config/
+    └── device_allowlist.example.yaml
+ARYA OS Smart Device Security
+
+- Default Deny: Har naya device aur action authorization ke bina blocked rahega.
+- No Arbitrary Execution: AI ko unrestricted shell commands ya network access nahi milega.
+- Local-First: Jahan possible ho, device control local network par hoga.
+- Secrets Protection: Device credentials secure, encrypted storage mein rakhe jayenge.
+- Emergency Stop: Automated commands ko rokne ke liye reliable emergency-stop mechanism hoga.
+- Fail-Safe: Network ya verification fail hone par ARYA success ka jhootha claim nahi karega.
+- Human Approval: Smart locks aur potentially dangerous appliance actions ke liye appropriate confirmation aur authentication zaroori hogi.
+- Audit Logging: Commands, authorization results aur device responses ka security audit record maintain hoga.
+
+- Smart Device Control Workflow
+
+Step 1 — Voice Command
+
+Boss: "ARYA, room ki light band karo."
+
+ARYA voice command receive karega aur user ka intent identify karega.
+
+Step 2 — Permission Check
+
+ARYA verify karega ki:
+
+- Device registered aur trusted hai.
+- User authorized hai.
+- Requested action allowed hai.
+
+Step 3 — Command Execution
+
+Device Manager compatible protocol ya authorized API ke through device ko command bhejega.
+
+Step 4 — State Verification
+
+ARYA device ka actual status read karke check karega ki light OFF hui ya nahi.
+
+Step 5 — Response
+
+Success: "Boss, light band ho gayi hai."
+
+Failure: "Boss, light band karne ki command verify nahi ho paayi."
+
+Important: ARYA tabhi success report karega jab device ka OFF status verify ho.
+Phase 1 — Device Simulation
+
+- Virtual smart lights aur switches implement karna.
+- Commands aur device states test karna.
+- Hardware ke bina basic workflow verify karna.
+
+Phase 2 — Local Device Integration
+
+- Ek compatible smart bulb ya smart plug select karna.
+- Local network ya supported API integration implement karna.
+- ON/OFF commands aur status verification test karna.
+
+Phase 3 — Security Integration
+
+- Device allowlist implement karna.
+- Authentication aur permission checks add karna.
+- Security audit logs aur emergency stop implement karna.
+
+Phase 4 — Multiple Protocols
+
+- Supported Wi-Fi integrations.
+- Bluetooth-compatible devices.
+- Matter-compatible devices aur required hubs.
+- Home Assistant integration, agar suitable ho.
+
+Phase 5 — ARYA OS Integration
+
+- Existing ARYA Brain se integration.
+- Existing Voice Engine se integration.
+- Offline/local control support.
+- Device status dashboard.
+- Automated testing aur security validation.
+
+Completion Criteria
+
+Feature tab complete maana jayega jab authorized commands successfully execute hon, unauthorized commands block hon, device status verify ho aur security tests pass hon.
+ARYA OS — Smart Device Control
+
+Objective: ARYA OS ko compatible smart devices ko securely monitor aur control karne ki capability dena.
+
+Planned Capabilities
+
+- Voice-controlled smart devices.
+- Device discovery and registration.
+- Modular protocol adapters.
+- Permission-based command execution.
+- Device state monitoring.
+- Security audit logging.
+- Local-first operation where supported.
+- Offline operation for compatible local integrations.
+
+Security Principles
+
+- Zero-trust authorization.
+- Default-deny device access.
+- Secure credential handling.
+- Restricted device permissions.
+- Verified command execution.
+- Emergency-stop support.
+
+Development Status: Architecture Proposed — Implementation and hardware validation pending.
+
+Privacy: Public documentation will describe the architecture without exposing private credentials, sensitive configurations or proprietary core implementation.
+ARYA-OS/
+├── smart_devices/
+│   ├── device_manager.py
+│   ├── device_registry.py
+│   ├── device_discovery.py
+│   ├── command_router.py
+│   ├── state_monitor.py
+│   ├── protocol_adapters/
+│   │   ├── wifi_adapter.py
+│   │   ├── bluetooth_adapter.py
+│   │   ├── matter_adapter.py
+│   │   └── home_assistant_adapter.py
+│   ├── security/
+│   │   ├── device_policy.py
+│   │   ├── authorization.py
+│   │   └── audit_logger.py
+│   └── tests/
+│       ├── test_permissions.py
+│       ├── test_commands.py
+│       └── test_state_verification.py
+└── config/
+└── device_allowlist.example.yaml
+
+Note: Yeh proposed structure hai. Existing ARYA OS files check karne ke baad hi actual integration aur filenames finalize karne chahiye.
+
