@@ -1,5 +1,76 @@
-8ARYA OS 🧠⚡
+ARYA OS 🧠⚡
+Architecture 
+User / ARYA -> ZeroTrustPermissionEngine -> Allow / Deny
+                    |
+                    v
+SecurityMonitoringEngine -> File Change Check (SHA-256)
+                    |
+                    v
+SentinelAuditLedger -> Hash-Chain me Save
+                    |
+                    v
+AIThreatAnalysisEngine -> Khatra hai ya nahi?
 
+[11/17, 7:04 PM] official_saurabh9423: Andar kya hai:
+• SentinelAuditLedger - Har event ka hash bana ke save karta hai, koi beech me edit nahi kar sakta • ZeroTrustPermissionEngine - Allowlist ke bahar koi file read/write nahi kar sakta • SecurityMonitoringEngine - File bani, delete hui, badli - sab pakadta hai • AIThreatAnalysisEngine - Threat ko samajhta hai • ARYASentinelV37 - Sabko chalane wala main controller  FILE 2 - Test File - Saboot Wali File
+Kaam: File 1 sach me kaam kar rahi hai ya nahi, ye check karna
+[11/17, 7:05 PM] official_saurabh9423: Test Start -> New File / Delete / Modify / Symlink
+       -> Emergency Stop Test
+       -> Human Approval Test
+       -> Tampering Test
+       -> Gemini Fail Test
+       -> Pass / Fail Report
+[11/17, 7:05 PM] official_saurabh9423: Andar kya hai:
+• 24 tests hai • File banne, mitne, badalne ka test • Emergency Stop ka test • Human Approval ke bina kaam na ho, iska test • Ledger me koi ched-chhad kare to pakda jaye, iska test 
+Ye file ARYA ko proof deti hai ki security jhoothi nahi, asli hai.
+FILE 3 - Block 16 New - Voice Ka HA Engine
+Kaam: Awaz kabhi ruke nahi, kabhi fail na ho
+[11/17, 7:05 PM] official_saurabh9423: User Voice -> Block16HAGovernor
+       -> CircuitBreaker -> API 1 Fail? -> API 2 pe jao
+       -> TieredAudioCache -> L1 RAM / L2 Disk se awaz uthao
+       -> ElevenLabsHighAvailabilityEngine -> Awaz banao
+       -> BoundedReplayCache -> Dobara same awaz na baje
+[11/17, 7:05 PM] official_saurabh9423: Andar kya hai:
+• CircuitBreaker - API fail ho to usko thodi der band kar deta hai • TieredAudioCache - L1 RAM me tez, L2 Disk me bada storage • ElevenLabsHighAvailabilityEngine - Awaz banane wala main engine • Block16HAGovernor - Sabka boss, kis API ko kitna load dena hai • BoundedReplayCache - Replay attack se bachata hai  FILE 4 - Block 16 Old - Voice Ka Purana Version
+Kaam: File 3 ka purana version, backup ke liye
+[11/17, 7:05 PM] official_saurabh9423: Same Flow Jaise File 3
+Par -> CircuitBreaker + Cache + HA Engine purana logic
+[11/17, 7:05 PM] official_saurabh9423: Andar kya hai:
+• CircuitBreaker, TieredAudioCache, ElevenLabsHighAvailabilityEngine - same naam, purana code • Is file ko ARYA me mat chalana, sirf compare karne ke liye rakha hai. Naya wala File 3 hi chalega.  FILE 5 - V14.3 Block 1 - Sabse Badi File, Poora Shareer
+Kaam: PC chalana, Mobile chalana, Dekhna, Sunna, Khud sochna
+[11/17, 7:05 PM] official_saurabh9423: Goal -> AutonomousAgentCore -> Task me todo
+  -> RealNativePCDriver -> PyAutoGUI - Mouse / Keyboard / Screenshot
+  -> RealAndroidADBDriver -> ADB - Tap / Swipe / Notification
+  -> RealVisionEngine -> Gemini Vision + 【entity-Tesseract¦canonical_name=Tesseract】 OCR
+  -> RealVoiceEngine -> VAD + Barge-In
+  -> RealDockerSandbox -> Code ko safe jagah chalao
+  -> RealMultiModelRouter -> Gemini + Ollama me se kisko bhejna hai
+  -> PredictiveFeelingEngine -> Mood samajhna
+  -> BeginnerCodeAssistant + UniversalZeroRefusalLearner
+  -> SwarmOrchestrator + AutonomousArchitectCore -> Khud ko upgrade karna
+  -> Sabka Record -> PersistentAuditLedger
+[11/17, 7:06 PM] official_saurabh9423: Andar 21 Classes hai, main wali ye hai:
+• PC + Mobile Driver, Vision, Voice, Docker Sandbox, Router, Agent Core, Feeling Engine, Code Assistant, Learner, Swarm, Architect 
+Ye file hi ARYA ka Haath, Aankh, Kaan hai.
+FILE 6 - V16.0 Block 10 - Memory + Emergency
+Kaam: Yaad rakhna aur khatra aaye to sab rok dena
+[11/17, 7:06 PM] official_saurabh9423: ARYA Kaam Kare -> PersistentStateLedger -> Save State
+CPU Zyada Ho -> HardwareResourceGovernor -> Worker ko slow karo
+Khatra Aaye -> MasterKillSwitch -> trigger_emergency_halt -> SAB BAND
+[11/17, 7:06 PM] official_saurabh9423: Andar kya hai:
+• PersistentStateLedger - Memory Vault, save_state / load_state • HardwareResourceGovernor - CPU limit check karta hai • MasterKillSwitch - Ek button, sab ruk jayega 
+Ye file chhoti hai par sabse zyada power isi me hai.
+FILE 7 - V16.0 Consolidated Kernel - Sabko Jodne Wala
+[11/17, 7:06 PM] official_saurabh9423: ARYAAutonomousKernel (Boss)
+  -> SecurityAuditLedger
+  -> ARYAVoiceEngine
+  -> CodeSandboxAnalyzer
+  -> DynamicAIRouter (Abhi Mock pe hai)
+  -> DeviceAutomationBroker
+  -> VisionEngine
+[11/17, 7:06 PM] official_saurabh9423: Andar kya hai:
+• ARYAAutonomousKernel - Sabka main controller • DynamicAIRouter - Gemini / Ollama ko call karne wala, par abhi Mock jawab deta hai - [Ollama Local Response] • Baaki sab - Security, Voice, Sandbox, Device, Vision ko ek saath chalata hai 
+Isi file se ARYA ek OS lagta hai, alag-alag file nahi.
 An AI-powered personal operating environment built for intelligent interaction, automation, vision, reasoning and security.
 
 «ARYA OS is a personal AI system designed to understand, reason, interact and assist across multiple digital environments.»
