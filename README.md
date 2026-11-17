@@ -10,8 +10,7 @@ SentinelAuditLedger -> Hash-Chain me Save
                     |
                     v
 AIThreatAnalysisEngine -> Khatra hai ya nahi?
-
-[11/17, 7:04 PM] official_saurabh9423: Andar kya hai:
+official_saurabh9423: Andar kya hai:
 • SentinelAuditLedger - Har event ka hash bana ke save karta hai, koi beech me edit nahi kar sakta • ZeroTrustPermissionEngine - Allowlist ke bahar koi file read/write nahi kar sakta • SecurityMonitoringEngine - File bani, delete hui, badli - sab pakadta hai • AIThreatAnalysisEngine - Threat ko samajhta hai • ARYASentinelV37 - Sabko chalane wala main controller  FILE 2 - Test File - Saboot Wali File
 Kaam: File 1 sach me kaam kar rahi hai ya nahi, ye check karna
 [11/17, 7:05 PM] official_saurabh9423: Test Start -> New File / Delete / Modify / Symlink
